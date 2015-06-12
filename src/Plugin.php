@@ -25,7 +25,7 @@ use React\EventLoop\Timer\TimerInterface;
  * @category Renegade334
  * @package Renegade334\Phergie\Plugin\React\Ping
  */
-class Plugin extends AbstractPlugin implements LoopAwareInterface
+class Plugin extends AbstractPlugin
 {
     const ERR_INVALID_WAIT = 1;
     const ERR_INVALID_TIMEOUT = 2;
@@ -50,35 +50,6 @@ class Plugin extends AbstractPlugin implements LoopAwareInterface
      * @var \SplObjectStorage
      */
     protected $timers;
-
-    /**
-     * Event loop.
-     *
-     * @param \React\EventLoop\LoopInterface $loop
-     */
-    protected $loop;
-
-    /**
-     * Event loop setter.
-     *
-     * @param \React\EventLoop\LoopInterface $loop
-     * @return $this
-     */
-    public function setLoop(LoopInterface $loop)
-    {
-        $this->loop = $loop;
-        return $this;
-    }
-
-    /**
-     * Event loop getter.
-     *
-     * @return \React\EventLoop\LoopInterface
-     */
-    public function getLoop()
-    {
-        return $this->loop;
-    }
 
     /**
      * Get timers store.
