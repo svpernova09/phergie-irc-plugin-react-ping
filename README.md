@@ -13,7 +13,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```JSON
 {
     "require": {
-        "renegade334/phergie-irc-plugin-react-ping": "dev-master"
+        "renegade334/phergie-irc-plugin-react-ping": "~2"
     }
 }
 ```
